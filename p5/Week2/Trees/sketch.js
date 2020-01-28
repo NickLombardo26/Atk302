@@ -82,6 +82,7 @@ fill('white');
 ellipse(400, 40, 140, 72);
 ellipse(400, 40, 100, 90);
 
+//Mouse Tracker
 fill(0);
 textSize(40);
   text(mouseX + ", " + mouseY, 100, 100);
