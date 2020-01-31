@@ -10,7 +10,7 @@ function draw()
 
 if(mouseIsPressed)
     {
-      //WHITE CIRCLES
+      //BLUE CIRCLES
         fill('blue')
           ellipse(75,75,150,150)
           ellipse(375,75,150,150)
