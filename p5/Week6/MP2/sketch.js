@@ -15,7 +15,7 @@ function draw() {
     textSize(20);
     text("I'm in state 0" , 100, 100) ;
 
-    timer = timer+1;
+    timer = timer++;
 
     if (timer > 200){
     myState=1;
