@@ -28,34 +28,38 @@ function draw() {
   switch(myState){
 
   case 0:
-    background('black');
-    song1.play();
-    myState=1;
+    background('blue');
     break;
 
   case 1:
-
+    background('black');
+    song1.play();
+    myState=2;
     break;
 
   case 2:
-    song2.play();
-    myState=3;
+
     break;
 
   case 3:
-    background('red');
+    song2.play();
+    myState=4;
     break;
 
   case 4:
-    song3.play();
-    myState=5;
+    background('red');
     break;
 
   case 5:
-    background('green');
+    song3.play();
+    myState=6;
     break;
 
   case 6:
+    background('green');
+    break;
+
+  case 7:
       background('gray');
       song3.stop();
       text("End");
@@ -72,7 +76,7 @@ function mousePressed(){
 function mouseReleased() {
 
   myState = myState +1 ;
-  if (myState>6){
+  if (myState>7){
     myState=0;
   }
 }
