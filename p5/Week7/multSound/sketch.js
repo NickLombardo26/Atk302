@@ -29,7 +29,8 @@ function draw() {
 
   case 0:
     background('blue');
-
+    text("Click Please",150,100);
+    textSize(18);
     break;
 
   case 1:
@@ -64,7 +65,7 @@ function draw() {
   case 7:
       background('gray');
       song3.stop();
-      text("End");
+      text("End",150,100);
       textSize(18);
       break;
     }
