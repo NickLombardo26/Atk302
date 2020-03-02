@@ -13,7 +13,7 @@ function draw() {
   switch (myState) {
 
     case 0:
-    text("Epstein didn't kill himself (click)", 100,100);
+    text("Epstein killed himself (click)", 100,100);
     textSize(24);
     break;
 
