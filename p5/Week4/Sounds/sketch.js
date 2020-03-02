@@ -1,7 +1,7 @@
 var song;
 
 function preload() {
-  song= loadSound('asset2/drum.wav');
+  song= loadSound('asset2/donkey2.mp3');
 
 }
 
