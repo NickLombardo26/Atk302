@@ -29,6 +29,7 @@ function draw() {
 
   case 0:
     background('blue');
+
     break;
 
   case 1:
@@ -48,6 +49,7 @@ function draw() {
 
   case 4:
     background('red');
+
     break;
 
   case 5:
