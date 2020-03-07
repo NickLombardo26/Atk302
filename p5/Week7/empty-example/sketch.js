@@ -1,7 +1,13 @@
+let button;
 function setup() {
-  // put setup code here
+  createCanvas(100, 100);
+  background(0);
+  button = createButton('click me');
+  button.position(19, 19);
+  button.mousePressed(changeBG);
 }
 
-function draw() {
-  // put drawing code here
+function changeBG() {
+  let val = random(255);
+  background(val);
 }
