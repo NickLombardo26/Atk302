@@ -24,6 +24,17 @@ function draw() {
 
       fill('black');
       textAlign(CENTER);
+      textSize(100);
+      text("BEGIN",400,400);
+
+
+    break ;
+
+    case 1 :
+      background('gray') ;
+
+      fill('black');
+      textAlign(CENTER);
       textSize(50);
       text("JIM JAM!",400,300);
       textSize(20);
@@ -31,7 +42,7 @@ function draw() {
 
     break ;
 
-    case 1 :
+    case 2 :
       background('white') ;
 
       textAlign(CENTER);
@@ -39,31 +50,20 @@ function draw() {
       text("JIM JAM is a game about quick comprehension!" , 400 ,200) ;
       text("Count all the squares as fast as you can," , 400 ,300) ;
       text("and submit your answer at the end. " , 400 ,350) ;
-      text("Click anywhere on the screen when ready..." , 400 ,450) ;
+      text("Press anywhere on the screen when ready..." , 400 ,450) ;
       text("DO NOT PLAY IF YOU HAVE EPILEPSY ",400, 550);
       text("OR ARE PRONE TO SEIZURE",400,575);
 
     break ;
 
-    case 2 :
+    case 3 :
       background('white') ;
 
         fill('red');
+
         rect(20,420,20,20);
         rect(287,185,20,20);
         rect(600,100,20,20);
-
-        timer++;
-        if (timer > 25) {timer=0;myState=3;}
-
-    break ;
-
-    case 3 :
-      background('black') ;
-
-      fill('yellow');
-      rect(700,620,10,10);
-
 
         timer++;
         if (timer > 25) {timer=0;myState=4;}
@@ -71,28 +71,41 @@ function draw() {
     break ;
 
     case 4 :
+      background('black') ;
+
+      fill('yellow');
+
+      rect(700,620,10,10);
+
+
+        timer++;
+        if (timer > 25) {timer=0;myState=5;}
+
+    break ;
+
+    case 5 :
       background(random(225),random(225)) ;
 
       fill(random(225),random(225),random(225));
-      
+
       rect(574,620,20,20);
       rect(340,334,10,10);
 
 
       timer++;
-      if (timer > 25) {timer=0;myState=5;}
+      if (timer > 25) {timer=0;myState=6;}
 
     break ;
 
-    case 5:
+    case 6:
       background(random(225),random(225),random(225)) ;
 
       timer++;
-      if (timer > 25) {timer=0;myState=6;}
+      if (timer > 25) {timer=0;myState=7;}
 
     break;
 
-    case 6:
+    case 7:
       background(random(225),random(225)) ;
 
       fill('white');
@@ -103,22 +116,22 @@ function draw() {
       rect(400,750,10,10);
 
       timer++;
-      if (timer > 25) {timer=0;myState=7;}
+      if (timer > 25) {timer=0;myState=8;}
 
     break;
 
-    case 7:
+    case 8:
       background(random(225),random(225)) ;
 
       ellipseMode(CENTER);
       ellipse(400,400,30,30);
 
       timer++;
-      if (timer > 25) {timer=0;myState=8;}
+      if (timer > 25) {timer=0;myState=9;}
 
     break;
 
-    case 8:
+    case 9:
 
       background('black') ;
       textSize(50);
@@ -153,7 +166,7 @@ function draw() {
 
     break;
 
-    case 9:
+    case 10:
 
       background('black');
       fill(random(225),random(225));
@@ -173,7 +186,7 @@ function draw() {
 
     break;
 
-    case 10:
+    case 11:
 
       background('black');
       fill(random(225),random(225),random(225));
@@ -198,16 +211,16 @@ function draw() {
 }
 
 function lose() {
-  myState=9;
+  myState=10;
 }
 function win() {
-  myState=10;
+  myState=11;
 }
 
 function mouseReleased() {
-  if (myState<2){myState = myState + 1 ;}
-  if(myState > 1){start=start.stop();}
-  if (myState > 10) {myState = 0 ;}
+  if (myState<3){myState = myState + 1 ;}
+  if(myState > 2){start=start.stop();}
+  if (myState > 11) {myState = 0 ;}
 }
 
   function touchStarted() {
