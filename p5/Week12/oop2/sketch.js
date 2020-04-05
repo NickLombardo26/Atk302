@@ -24,7 +24,7 @@ switch (myState) {
   case 0:
     background('red');
     fill('white');
-    text('Welcome to my game!', width/2, height/2);
+    text('Welcome to my game! (click)', width/2, height/2);
     textSize(24);
   break;
 
