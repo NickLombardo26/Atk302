@@ -42,6 +42,7 @@ switch (myState) {
     fill('black');
     textSize(35);
     text("welcome to...",width/2, height/2);
+    text("(Sound Warning!)", width/2, 600);
     break;
 
   case 1:
