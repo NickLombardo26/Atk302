@@ -8,6 +8,7 @@ var timer = maxTimer;
 function setup() {
   createCanvas(800, 800);
 
+
 for (var i = 0; i < 5; i ++) {
   cars.push(new Car());
 }
@@ -22,10 +23,10 @@ function draw() {
 
 switch (myState) {
   case 0:
-    background('red');
+    background('blue');
     fill('white');
     text('Welcome to my game! (click)', width/2, height/2);
-    textSize(24);
+    textSize(50);
   break;
 
   case 1:
@@ -39,12 +40,20 @@ switch (myState) {
 
   case 2:
     background('yellow');
-    text("YAY! You've won!", width/2, height/2);
+    textSize(75);
+    text("YAY!", width/2, 300);
+    textSize(50);
+    text("You've won!", width/2, height/2 );
   break;
 
   case 3:
-    background('purple');
-    text("Sorry! You've lost, try again!", width/2, height/2);
+    background('red');
+    fill('white');
+    textSize(75);
+    text("Sorry!", width/2, 300);
+    textSize(50);
+    text("You've lost, try again!", width/2, height/2);
+
   break;
 
 
@@ -93,8 +102,18 @@ function game() {
   }
 
   //frog
-  fill('green');
-  ellipse(frogPos.x,frogPos.y,50,50);
+  rectMode(CENTER);
+  ellipseMode(CENTER);
+  fill('black');
+  rect(frogPos.x,frogPos.y,50,50);
+  fill('red')
+  ellipse(frogPos.x+10,frogPos.y-7,15,10);
+  ellipse(frogPos.x-10,frogPos.y-7,15,10);
+  arc(frogPos.x,frogPos.y+10, 20, 20, PI, 0, CHORD);
+
+
+
+
   check4keys();
 
 }
@@ -105,6 +124,7 @@ function check4keys() {
   if (keyIsDown(UP_ARROW)) frogPos.y -=5;
   if (keyIsDown(DOWN_ARROW)) frogPos.y +=5;
 
+
 }
 
 function Car() {
@@ -114,18 +134,27 @@ function Car() {
   this.r = random(255);
   this.g = random(255);
   this.b = random(255);
+
+
+
   //methods
    this.display = function() {
-     fill(this.r, this.g, this.b)
-     rect(this.pos.x,this.pos.y,35,35);
+     ellipseMode(CENTER);
+     fill(this.r, this.g, this.b);
+     ellipse(this.pos.x,this.pos.y,40,40);
+     fill(51);
+     ellipse(this.pos.x - 10,this.pos.y -3, 5,5);
+     ellipse(this.pos.x + 10,this.pos.y - 3, 5,5);
+     arc(this.pos.x,this.pos.y, 10, 10, 0, PI, CHORD);
 
- }
+   }
+
  this.drive = function() {
    this.pos.add(this.vel);
    if (this.pos.x > width) this.pos.x = 0;
    if (this.pos.x < 0) this.pos.x = width;
    if (this.pos.y > height) this.pos.y = 0;
    if (this.pos.y < 0) this.pos.y = height;
-
  }
+
 }
