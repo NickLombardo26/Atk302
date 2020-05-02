@@ -49,9 +49,9 @@ function draw() {
   // MORE DECORATIONS - write that pretty ATK type on top.
   fill('Green');
   noStroke();
-  textSize(12);
+  textSize(60);
   textAlign(CENTER);
-  text("ALIEN", width / 2, height / 2);
+  text("ALIENS", width / 2, height / 2);
 
 }
 
