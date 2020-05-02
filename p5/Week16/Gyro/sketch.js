@@ -67,7 +67,7 @@ function draw() {
   noStroke();
   textSize(12);
   textAlign(CENTER);
-  text("ALIENS", width / 2, height / 2);
+  text("ALIEN", width / 2, height / 2);
 
 }
 
